@@ -1,3 +1,4 @@
+#Code Python 2
 def Coeff_G(n,vector,a):
     for m in range(n+1):
         vector.append([1])
@@ -10,3 +11,4 @@ def Coeff_G(n,vector,a):
             else:
                 num=a[m-k]*vector[m-1][k-1]
                 vector[m].append(vector[m-1][k]+num)
+
