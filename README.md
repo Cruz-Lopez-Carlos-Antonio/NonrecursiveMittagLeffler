@@ -1,6 +1,23 @@
 # A Non-recursive Formula for the High-order Derivative of the Two-Parameter Mittag-Leffler Function
 
-This repository contains the theoretical development and Python implementations of a **non-recursive formula** for the high-order derivatives of the two-parameter Mittag-Leffler function (2PMLF).
+This repository is one of the research products of the project:
+
+*“Desarrollo de modelos fenomenológicos energéticos de orden fraccional, para la optimización y simulación en reactores nucleares de potencia”*,  
+
+funded by the **Consejo Nacional de Humanidades, Ciencia y Tecnología (CONAHCYT)** under the program *“Estancias Posdoctorales por México, 2022”*, and by the **Basic Science and Frontier Project 2023-2024**, reference **CBF-2023-2024-2023**.
+
+---
+
+## Purpose
+
+The non-recursive formula developed here allows **efficient and direct computation** of high-order derivatives of the 2PMLF, avoiding recursive definitions and enabling pre-computations.  
+
+This is useful for:
+
+- Developing analytical and numerical solutions of **fractional differential equations**.  
+- Modeling **memory effects** and **anomalous diffusion** in physics and engineering.  
+- Applications in **nuclear engineering**, such as fractional Bateman equations and fractional neutron point kinetics.  
+- More general **fractional models** in pharmacokinetics, transport processes, and complex systems.
 
 ---
 
@@ -52,20 +69,20 @@ This repository includes Python 3 implementations for:
 
 ---
 
-## Applications
+## Example (Python)
 
-The developed formula is relevant for the analytical solution of problems in **nuclear engineering**, including:
+```python
+# Example: computing Stirling numbers of the first kind
+from stirling import stirlings
 
-- Fractional Bateman equations  
-- Fractional neutron point kinetics  
-- Non-exponential kinetics in complex systems  
+vector = []
+stirlings(6, vector)
+print("Row for n=6:", vector[-1])
 
----
+# Example: computing nested sums G(j,n)
+from nested_sums import Coeff_G
 
-## References
-
-- R. Gorenflo, A.A. Kilbas, F. Mainardi, S. Rogosin, *Mittag-Leffler Functions, Related Topics and Applications*. Springer, 2020.  
-- R. Garrappa, M. Popolizio, *Computing the Matrix Mittag-Leffler Function with Applications to Fractional Calculus*. J. Sci. Comput. 77 (2018), 129–153.  
-- C.-A. Cruz-López, G. Espinosa-Paredes, *Fractional Radioactive Decay Law and Bateman Equations*. Nucl. Eng. Technol. 54 (2022), 275–282.  
-
----
+a = [11.9 - u for u in range(0, 7)]  # Example values
+vector_test = []
+Coeff_G(6, vector_test, a)
+print("Row for n=6:", vector_test[-1])
