@@ -1,5 +1,5 @@
 function V = Coeff_G(n, a)
-% Coeff_G  (versión MATLAB no recursiva, numérica)
+%   Coeff_G  (versión MATLAB no recursiva, numérica)
 % n : entero >= 0
 % a : vector fila/columna con al menos n elementos (a(1),...,a(n))
 % V : matriz (n+1) x (n+1)
