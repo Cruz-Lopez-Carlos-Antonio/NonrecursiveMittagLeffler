@@ -1,3 +1,4 @@
+#Code Python 1
 def stirlings(n,vector):
     for z in range(n+1):
         if z==0:                    #Condition of Eq.(41)
@@ -11,3 +12,4 @@ def stirlings(n,vector):
             else:
                 sn=vector[u-1][k-1]
             vector[u].append(sn)
+
